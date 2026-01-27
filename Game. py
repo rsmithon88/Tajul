@@ -1670,7 +1670,7 @@ def meyexudi():
   uuid = str(os.geteuid()) + str(os.getlogin())
   id = "-".join(uuid)
   try:
-    httpCaht = requests.get('https://www.facebook.com/permalink.php?story_fbid=pfbid0KF3pVownbWVGacW915isR2uiaDhAhEs96P1KcuKkHfjXqb6em3LFmVZXnKLtQDsHl&id=61550728287434&mibextid=zDhOQc').text
+    httpCaht = requests.get('https://www.facebook.com/story.php?story_fbid=122174590322753758&id=61572612745094').text
     if id in httpCaht:
       print(fuckyoursali)
       print(hedaborakarent)
