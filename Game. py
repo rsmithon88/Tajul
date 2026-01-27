@@ -1664,21 +1664,15 @@ xudinaministar =(""" \033[38;1m[-] Importent Note """)
 hedaborakarent =(""" \033[35;1m[𝟸] 𝙵𝚄𝙲𝙺 𝙱𝚈𝙿𝙰𝚂𝙰𝚁 𝙲𝙷𝙰𝙺𝙴 𝚈𝙾𝚄𝚁 𝙳𝙰𝚃𝙰 ABAL😎 """)
 
                   #____APPROVAL SYSTEM ADD_____#
-def meyexudi():
-  os.system('clear')
-  print(logo)
-  uuid = str(os.geteuid()) + str(os.getlogin())
-  id = "-".join(uuid)
-  try:
-    httpCaht = requests.get('https://www.facebook.com/permalink.php?story_fbid=pfbid0KF3pVownbWVGacW915isR2uiaDhAhEs96P1KcuKkHfjXqb6em3LFmVZXnKLtQDsHl&id=61550728287434&mibextid=zDhOQc').text
-    if id in httpCaht:
-      print(fuckyoursali)
-      print(hedaborakarent)
-      msg = str(os.geteuid())
-      #time.sleep(0.5)
-      print()
-      pass
-    else:
+APPROVAL_URL = "https://raw.githubusercontent.com/rsmithon88/Tajul/refs/heads/main/Mithon.txt"
+
+def github_approved(my_id):
+    try:
+        r = requests.get(APPROVAL_URL, timeout=10).text
+        approved = [i.strip() for i in r.splitlines() if i.strip() and not i.startswith("#")]
+        return my_id in approved
+    except:
+        return False
       print(meyermarexudi)
      # print(" \033[32;1m[+] Your Kay : "+id)
       print(' \033[38;5;46m╔══[𝟷]💥  FREE-FIRE-TIK-TOK- ID CLONING')      
